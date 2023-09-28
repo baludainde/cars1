@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url(car3.jpg);
+            background-size: cover;
+            height: 100vh;
+            background-repeat: center;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        #id1 {
+            border: 3px solid aqua;
+            padding: 5px 10px;
+            color: rgb(41, 21, 221);
+            border-radius: 5px;
+            
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        #id2 {
+            border-radius: 20px;
+            border: 30px;
+        }
+
+        #id3 {
+            border-radius: 20px;
+        }
+
+        #id4 {
+            border-radius: 20px;
+        }
+
+        #id5 {
+            border-radius: 20px;
+        }
+
+        #one {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 850px;
+        }
+
+        .d2 {
+            margin-top: 7px;
+            margin-bottom: 3px;
+        }
+
+        .d4 {
+            margin-top: 3px;
+            margin-bottom: 2px;
+        }
+
+        .d3 {
+            margin-top: 3px;
+            margin-bottom: 2px;
+        }
+
+        .submit {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="one">
+    <div id="id1">
+        <center>
+            <h1>Login</h1>
+            <form method="post" action="/loginSubmit">
+                <div class="d2">
+                    Email id :
+                    <input id="i3" type="text" name="Email">
+                </div>
+                <br>
+                <div class="d4">
+                    Password:
+                    <input id="i4" type="password" name="Password" id="password">
+                    <br>
+                    <br>
+                    <button class="submit" type="submit">SUBMIT</button>
+                    
+                </div>
+            </form>
+        </center>
+    </div>
+</div>
+<script>
+    // Get references to the password input and the "Show Password" button
+    const passwordInput = document.getElementById("password");
+    const showPasswordButton = document.getElementById("showPassword");
+
+    // Add a click event listener to the "Show Password" button
+    showPasswordButton.addEventListener("click", function () {
+        // Toggle the input type between "password" and "text"
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
+    });
+</script>
+</body>
+</html>

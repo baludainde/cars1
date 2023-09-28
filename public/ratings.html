@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback and Rating System</title>
+    <style>
+        /* CSS styles here */
+        /* ... (your CSS styles) ... */
+        /* CSS styles for the feedback and rating system */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .feedback-form {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .rating-section {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            cursor: pointer;
+            color: #ccc;
+            transition: color 0.3s;
+        }
+
+        .stars.active {
+            color: #fcd800;
+        }
+
+        button {
+            background-color: #fcd800;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffea00;
+        }
+
+        #feedback-list {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        #success-message {
+            display: none;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedback and Rating System</h1>
+
+    <!-- Feedback Form -->
+    <div class="feedback-form">
+        <h2>Leave Your Feedback</h2>
+        <textarea id="feedback-text" placeholder="Write your feedback here"></textarea>
+        <div class="rating-section">
+            <span class="stars" data-rating="1">★</span>
+            <span class="stars" data-rating="2">★</span>
+            <span class="stars" data-rating="3">★</span>
+            <span class="stars" data-rating="4">★</span>
+            <span class="stars" data-rating="5">★</span>
+        </div>
+        <button onclick="submitFeedback()">Submit</button>
+    </div>
+
+    <div id="feedback-list">
+        <!-- User feedback and ratings will be displayed here -->
+    </div>
+
+    <div id="success-message">
+        Feedback submitted successfully!
+        Thanks for your valuable Feedback!
+    </div>
+
+    <script>
+        // JavaScript code here
+        const stars = document.querySelectorAll(".stars");
+
+        stars.forEach((star) => {
+            star.addEventListener("click", () => {
+                const rating = parseInt(star.getAttribute("data-rating"));
+                rate(rating);
+            });
+        });
+
+        function rate(rating) {
+            stars.forEach((star) => {
+                const starRating = parseInt(star.getAttribute("data-rating"));
+                if (starRating <= rating) {
+                    star.classList.add("active");
+                } else {
+                    star.classList.remove("active");
+                }
+            });
+        }
+
+        function submitFeedback() {
+            const feedbackText = document.getElementById("feedback-text").value;
+            // Simulate a successful submission (you would send data to your server here)
+            const feedbackSubmitted = true; // Change this based on your actual submission logic
+
+            if (feedbackSubmitted) {
+                // Hide the feedback form
+                document.querySelector(".feedback-form").style.display = "none";
+                // Show the success message
+                document.getElementById("success-message").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

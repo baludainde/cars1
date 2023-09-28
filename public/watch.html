@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Streams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .stream {
+            margin: 20px;
+            display: inline-block;
+            width: calc(50% - 40px);
+            
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .stream iframe {
+            width: 100%;
+            height: 300px;
+            
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        body {
+            background-image: url(a4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Live Streams</h1>
+    </header>
+
+    <div class="container">
+        <div class="stream">
+            <iframe src="https://www.youtube.com/embed/PO834baHIhc" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="stream">
+            <iframe src="https://www.youtube.com/embed/lWRxbvQcjVE" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="stream">
+            <iframe src="https://www.youtube.com/embed/6P4AF8eP-Yg" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="stream">
+            <iframe src="https://www.youtube.com/embed/NfnQ8gQlOIA" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Website</p>
+    </footer>
+</body>
+
+</html>

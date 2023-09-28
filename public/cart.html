@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="my.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Sales</title>
+    <style>
+        /* Existing styles... */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background-image: url(back.jpg);
+            background-size: cover;
+            height: 100px;
+            background-repeat: center;
+                }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .car {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+        }
+
+        .car img {
+            max-width: 100%;
+            height: auto;
+    
+        }
+
+        .car h2 {
+            font-size: 24px;
+            margin-top: 10px;
+            
+        }
+
+        .car p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .cart-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-button:hover {
+            background-color: #0056b3;
+        }
+        .bb{
+            color:red;
+            text-align: center;
+            font-size: 40px;
+        }
+        
+    </style>
+    
+</head>
+<body>
+   <!-- <form method="post" action="/loginSubmit">-->
+    <header>
+        <h1>Car Sales</h1>
+    </header>
+    <section class="back">
+        <h2 class="bb">Supercars for Sale</h2>
+        <div class="container">
+            <div class="car">
+                <img src="car1.jpg" alt="Car 1">
+                <h2>Lamborghini Aventador</h2>
+                <p>Price: $400,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="400000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Lamborghini Aventador">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="cars22.jpg" alt="Car 2">
+                <h2>Mustang GT3</h2>
+                <p>Price: $350,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="350000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Mustang GT3">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="car3.jpg" alt="Car 3">
+                <h2>Mustang 1994</h2>
+                <p>Price: $250,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="250000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Mustang 1994">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="cars5.jpg" alt="Car 4">
+                <h2>Aston Martin DBS</h2>
+                <p>Price: $300,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="300000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Aston Martin DBS">AddToCart</button></form></h2>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="bb">SUV Cars for Sale</h2>
+        <div class="container">
+            <div class="car">
+                <img src="urus.jpg" alt="SUV Car 1">
+                <h2>Lamborghini Urus</h2>
+                <p>Price: $225,500</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="225000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Lamborghini Urus">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="amg.jpeg" alt="SUV Car 2">
+                <h2>Mercedes-Benz AMG</h2>
+                <p>Price: $40,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="400000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Mercedes-Benz AMG">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="v80.jpg" alt="SUV Car 3">
+                <h2>Genesis GV80</h2>
+                <p>Price: $50,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="500000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Genesis GV80">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="x7.webp" alt="SUV Car 4">
+                <h2>BMW X7</h2>
+                <p>Price: $35,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="350000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="BMW X7">AddToCart</button></form></h2>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="bb">Sports Cars for Sale</h2>
+        <div class="container">
+            <div class="car">
+                <img src="porsche.webp" alt="Sports Car 1">
+                <h2>Porsche 911 GT3</h2>
+                <p>Price: $200,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="200000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Porsche 911 GT3">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="chevy.webp" alt="Sports Car 2">
+                <h2>Chevrolet Corvette</h2>
+                <p>Price: $80,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="800000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Chevrolet Corvette">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="gt.jpg" alt="Sports Car 3">
+                <h2>Ford Mustang Shelby GT500</h2>
+                <p>Price: $70,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="700000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Ford Mustang Shelby GT500">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="r8.jpg" alt="Sports Car 4">
+                <h2>Audi R8</h2>
+                <p>Price: $160,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="160000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Audi R8">AddToCart</button></form></h2>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="bb">Sedan Cars for Sale</h2>
+        <div class="container">
+            <div class="car">
+                <img src="bmw3.webp" alt="Sedan Car 1">
+                <h2>BMW 3 Series</h2>
+                <p>Price: $40,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="400000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="BMW 3 Series">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="e class.jpeg" alt="Sedan Car 2">
+                <h2>Mercedes-Benz E-Class</h2>
+                <p>Price: $50,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="500000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Mercedes-Benz E-Class">AddToCart</button></form></h2>
+            </div>
+            <div class="car">
+                <img src="a4.jpg" alt="Sedan Car 3">
+                <h2>Audi A4</h2>
+                <p>Price: $35,000</p>
+                <h2><form action="/addedToCart" method="GET"><input type="hidden" name="cost" value="350000"><input type="hidden" name="amount" value="<%= totalamount %>"><input type="hidden" name="email" value="<%= useremail %>"><button class="cart-button" type="submit" name="item" value="Audi A4">AddToCart</button></form></h2>
+            </div>
+        </div>
+    </section>
+
+   <!-- <div class="cart">
+        <h1>Cart</h1>
+        <br>
+        <ul id="cartItems" name="cartItems">
+        </ul>
+        <p>Total Cost: $<span id="totalCost">0</span></p>
+        <button onclick="order()">Order</button>-->
+    </div>
+    
+</body>
+</html>

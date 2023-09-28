@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARS WEB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Century Gothic;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../cars5.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 70px;
+            padding: 5px 20px;
+            background-color: #000;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .logo img {
+            max-width: 150px;
+            height: auto;
+            margin: 10px;
+        }
+
+        .title {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .title h1 {
+            font-size: 85px;
+        }
+
+        .button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        .btn {
+            text-decoration: none;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            margin: 10px;
+         transition: background-color 0.6s ease, color 0.6s ease;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+         
+
+        @media screen and (max-width: 768px) {
+            .nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+
+            .nav a {
+                margin: 10px 20px;
+            }
+
+            .logo img {
+                max-width: 15%;
+            }
+
+            .title h1 {
+                font-size: 2rem;
+            }
+
+            .button {
+                top: 60%;
+            }
+        }
+        .size1{
+            border: 3px solid aqua ;
+       padding: 10px 10px;
+       color:rgb(16, 222, 47);
+       border-radius: 5px;
+       margin-top: 200px;
+}
+
+
+.h{
+    margin-top: 50px;
+    color: aqua;
+    font-size: 50px;
+}     
+    </style>
+</head>
+<body>
+<header>
+    <div class="nav">
+        <a href="#"><i class="fa fa-home"></i> Home</a>
+        <a href="About.html">About</a>
+        <a href="/cart.html">Cart</a>
+        <a href="privacy policy.html">privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="ratings.html">Ratings</a>
+    </div>
+    <div class="logo">
+        <img src="cars.avif" alt="Logo">
+    </div>
+    <div class="title">
+        <h1>CarEnthusiast</h1>
+    </div>
+    <div class="button">
+       <div class="size1"> <a href="watch.html" class="btn">WATCH VIDEO</a></div>
+      
+      <h1 class="h">HAPPY SHOPPING</h1>
+    </div>
+</header>
+</body>
+</html>
